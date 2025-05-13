@@ -147,6 +147,23 @@
         flex-direction: column;
       }
     }
+
+    /* Adicionando estilo para o botão interativo de "O que fazemos" */
+    .interativo-btn {
+      background-color: var(--laranja);
+      color: var(--branco);
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .interativo-btn:hover {
+      background-color: #cc5200;
+    }
   </style>
 </head>
 <body>
@@ -154,7 +171,7 @@
   <header>
     <div class="logo">Jr Informática</div>
     <nav>
-      <a href="#produtos">Serviços</a>
+      <a href="#produtos">Produtos</a>
       <a href="#sobre">Sobre</a>
       <a href="#contato">Contato</a>
     </nav>
@@ -169,29 +186,19 @@
     <h2>Nossos Serviços</h2>
     <div class="produtos">
       <div class="produto">
-        <h3>Xerox</h3>
-        <p>Impressões de alta qualidade para documentos em preto e branco ou colorido.</p>
+        <h3>Montagem de PCs</h3>
+        <p>Personalize sua máquina para jogos, trabalho ou uso doméstico.</p>
         <a href="#contato" class="btn">Solicitar Orçamento</a>
       </div>
       <div class="produto">
-        <h3>Recarga de Cartuchos</h3>
-        <p>Economize recarregando seus cartuchos de tinta e tonner com alta qualidade.</p>
+        <h3>Manutenção Técnica</h3>
+        <p>Formatamos, limpamos e otimizamos seu equipamento com rapidez.</p>
         <a href="#contato" class="btn">Agendar Atendimento</a>
       </div>
       <div class="produto">
-        <h3>Venda de Tonners</h3>
-        <p>Compre tonners originais e compatíveis para sua impressora com preços competitivos.</p>
+        <h3>Periféricos e Acessórios</h3>
+        <p>Teclados, mouses, fones, webcams e muito mais com ótimos preços.</p>
         <a href="#contato" class="btn">Ver Catálogo</a>
-      </div>
-      <div class="produto">
-        <h3>Conserto de Impressoras</h3>
-        <p>Serviço especializado no conserto de impressoras, com garantia e eficiência.</p>
-        <a href="#contato" class="btn">Agendar Serviço</a>
-      </div>
-      <div class="produto">
-        <h3>Conserto de Computadores</h3>
-        <p>Realizamos reparos rápidos e eficazes para computadores e notebooks de diversas marcas.</p>
-        <a href="#contato" class="btn">Solicitar Diagnóstico</a>
       </div>
     </div>
   </section>
@@ -200,6 +207,9 @@
     <h2>Sobre a Jr Informática</h2>
     <p>Somos uma loja especializada em soluções tecnológicas. Atuamos com montagem de PCs, manutenção de equipamentos e venda de acessórios de informática.</p>
     <p>Nosso compromisso é oferecer um atendimento personalizado, ágil e com garantia de qualidade.</p>
+    <button class="interativo-btn" onclick="alert('Nós fazemos montagem de computadores, manutenção, venda de periféricos, recargas de cartuchos, e muito mais!')">
+      O que fazemos?
+    </button>
   </section>
 
   <section id="contato" class="section">
