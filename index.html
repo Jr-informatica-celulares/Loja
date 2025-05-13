@@ -1,59 +1,218 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jr Informática e Celulares</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jr Informática</title>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --preto: #000000;
+      --laranja: #FF6600;
+      --cinza-claro: #f0f0f0;
+      --branco: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Titillium Web', sans-serif;
+      background-color: var(--cinza-claro);
+      color: var(--preto);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--preto);
+      color: var(--branco);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo {
+      font-size: 1.8em;
+      font-weight: 700;
+      background-color: var(--laranja);
+      color: var(--preto);
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+
+    nav a {
+      color: var(--laranja);
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--branco);
+    }
+
+    .banner {
+      background: linear-gradient(to right, #ff6600, #ff8533);
+      color: var(--branco);
+      padding: 80px 30px;
+      text-align: center;
+    }
+
+    .banner h1 {
+      font-size: 3em;
+      margin: 0 0 10px;
+    }
+
+    .banner p {
+      font-size: 1.2em;
+    }
+
+    .section {
+      padding: 60px 40px;
+      background-color: var(--branco);
+      margin: 20px auto;
+      max-width: 1000px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .section h2 {
+      color: var(--laranja);
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+
+    .produtos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .produto {
+      flex: 1 1 250px;
+      background-color: var(--cinza-claro);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .produto:hover {
+      transform: translateY(-5px);
+    }
+
+    .produto h3 {
+      margin-top: 0;
+      color: var(--preto);
+    }
+
+    .produto p {
+      color: #333;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: var(--laranja);
+      color: var(--branco);
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #cc5200;
+    }
+
+    footer {
+      background-color: var(--preto);
+      color: #ccc;
+      text-align: center;
+      padding: 25px 10px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      header, .section {
+        padding: 20px;
+        flex-direction: column;
+      }
+
+      .produtos {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Jr Informática e Celulares</h1>
-        <nav>
-            <ul>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="servicos">
-        <h2>O que fazemos</h2>
-        <ul>
-            <li>Vendas de acessórios e equipamentos</li>
-            <li>Xerox e impressões</li>
-            <li>Recargas de cartuchos</li>
-            <li>Venda de toners de impressora</li>
-            <li>Conserto de impressoras</li>
-            <li>Conserto de computadores</li>
-        </ul>
-    </section>
+  <header>
+    <div class="logo">Jr Informática</div>
+    <nav>
+      <a href="#produtos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
 
-    <section id="sobre">
-        <h2>Sobre nós</h2>
-        <p>Somos uma loja de informática e celulares com atendimento personalizado, compromisso e qualidade.</p>
-    </section>
+  <section class="banner">
+    <h1>Soluções em Tecnologia</h1>
+    <p>Montagem, manutenção e venda de equipamentos com qualidade e confiança.</p>
+  </section>
 
-    <section id="contato">
-        <h2>Contato</h2>
-        <form action="https://formsubmit.co/seuemail@dominio.com" method="POST">
-            <input type="text" name="nome" placeholder="Seu nome" required><br>
-            <input type="email" name="email" placeholder="Seu email" required><br>
-            <textarea name="mensagem" placeholder="Sua mensagem" required></textarea><br>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
+  <section id="produtos" class="section">
+    <h2>Nossos Serviços</h2>
+    <div class="produtos">
+      <div class="produto">
+        <h3>Xerox</h3>
+        <p>Impressões de alta qualidade para documentos em preto e branco ou colorido.</p>
+        <a href="#contato" class="btn">Solicitar Orçamento</a>
+      </div>
+      <div class="produto">
+        <h3>Recarga de Cartuchos</h3>
+        <p>Economize recarregando seus cartuchos de tinta e tonner com alta qualidade.</p>
+        <a href="#contato" class="btn">Agendar Atendimento</a>
+      </div>
+      <div class="produto">
+        <h3>Venda de Tonners</h3>
+        <p>Compre tonners originais e compatíveis para sua impressora com preços competitivos.</p>
+        <a href="#contato" class="btn">Ver Catálogo</a>
+      </div>
+      <div class="produto">
+        <h3>Conserto de Impressoras</h3>
+        <p>Serviço especializado no conserto de impressoras, com garantia e eficiência.</p>
+        <a href="#contato" class="btn">Agendar Serviço</a>
+      </div>
+      <div class="produto">
+        <h3>Conserto de Computadores</h3>
+        <p>Realizamos reparos rápidos e eficazes para computadores e notebooks de diversas marcas.</p>
+        <a href="#contato" class="btn">Solicitar Diagnóstico</a>
+      </div>
+    </div>
+  </section>
 
-    <section id="mapa">
-        <h2>Onde estamos</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=COLE-AQUI-SEU-EMBED"
-                width="100%" height="250" style="border:0;" allowfullscreen=""
-                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </section>
+  <section id="sobre" class="section">
+    <h2>Sobre a Jr Informática</h2>
+    <p>Somos uma loja especializada em soluções tecnológicas. Atuamos com montagem de PCs, manutenção de equipamentos e venda de acessórios de informática.</p>
+    <p>Nosso compromisso é oferecer um atendimento personalizado, ágil e com garantia de qualidade.</p>
+  </section>
 
-    <a href="https://wa.me/5511999999999" target="_blank" class="whatsapp-float">
-        <img src="https://img.icons8.com/color/48/whatsapp.png" alt="WhatsApp">
-    </a>
+  <section id="contato" class="section">
+    <h2>Fale Conosco</h2>
+    <p><strong>Telefone:</strong> (00) 0000-0000</p>
+    <p><strong>Email:</strong> contato@jrinformatica.com</p>
+    <p><strong>Endereço:</strong> Rua Exemplo, 123 - Centro, Sua Cidade</p>
+    <a href="mailto:contato@jrinformatica.com" class="btn">Enviar Email</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Jr Informática. Todos os direitos reservados.</p>
+  </footer>
+
 </body>
 </html>
