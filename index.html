@@ -1,17 +1,14 @@
-
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jr Informática</title>
+    <title>Jr Informática e Celulares</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="logo">
-            <h1>Jr Informática</h1>
-        </div>
+        <h1>Jr Informática e Celulares</h1>
         <nav>
             <ul>
                 <li><a href="#servicos">Serviços</a></li>
@@ -22,28 +19,41 @@
     </header>
 
     <section id="servicos">
-        <h2>Serviços</h2>
+        <h2>O que fazemos</h2>
         <ul>
-            <li>Xerox</li>
-            <li>Recarga de Cartuchos</li>
-            <li>Venda de Tonners de Impressoras</li>
-            <li>Conserto de Impressoras e Computadores</li>
+            <li>Vendas de acessórios e equipamentos</li>
+            <li>Xerox e impressões</li>
+            <li>Recargas de cartuchos</li>
+            <li>Venda de toners de impressora</li>
+            <li>Conserto de impressoras</li>
+            <li>Conserto de computadores</li>
         </ul>
     </section>
 
     <section id="sobre">
-        <h2>Sobre</h2>
-        <p>Somos uma loja especializada em serviços de informática, oferecendo soluções rápidas e eficazes para o seu dia a dia.</p>
+        <h2>Sobre nós</h2>
+        <p>Somos uma loja de informática e celulares com atendimento personalizado, compromisso e qualidade.</p>
     </section>
 
     <section id="contato">
         <h2>Contato</h2>
-        <p>Endereço: Rua Exemplo, 123</p>
-        <p>Email: contato@jrinformatica.com.br</p>
+        <form action="https://formsubmit.co/seuemail@dominio.com" method="POST">
+            <input type="text" name="nome" placeholder="Seu nome" required><br>
+            <input type="email" name="email" placeholder="Seu email" required><br>
+            <textarea name="mensagem" placeholder="Sua mensagem" required></textarea><br>
+            <button type="submit">Enviar</button>
+        </form>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Jr Informática. Todos os direitos reservados.</p>
-    </footer>
+    <section id="mapa">
+        <h2>Onde estamos</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=COLE-AQUI-SEU-EMBED"
+                width="100%" height="250" style="border:0;" allowfullscreen=""
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <a href="https://wa.me/5511999999999" target="_blank" class="whatsapp-float">
+        <img src="https://img.icons8.com/color/48/whatsapp.png" alt="WhatsApp">
+    </a>
 </body>
 </html>
