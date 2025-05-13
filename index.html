@@ -32,12 +32,24 @@
     }
 
     .logo {
+      display: flex;
+      align-items: center;
       font-size: 1.8em;
       font-weight: 700;
       background-color: var(--laranja);
       color: var(--preto);
       padding: 10px 20px;
       border-radius: 8px;
+    }
+
+    .logo img {
+      width: 50px; /* Ajuste o tamanho da imagem */
+      height: auto;
+      margin-right: 10px; /* Espaçamento entre a logo e o nome */
+    }
+
+    .logo span {
+      font-size: 1.6em;
     }
 
     nav a {
@@ -169,7 +181,10 @@
 <body>
 
   <header>
-    <div class="logo">Jr Informática</div>
+    <div class="logo">
+      <img src="imagens/logo.png" alt="Jr Informática" style="width: 50px; height: auto; margin-right: 10px;">
+      <span>Jr Informática</span>
+    </div>
     <nav>
       <a href="#produtos">Produtos</a>
       <a href="#sobre">Sobre</a>
